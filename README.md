@@ -1,5 +1,5 @@
 # C# Link-Shortner
-##An Online Link Shortener Written in C# made to work with NgRok
+## An Online Link Shortener Written in C# made to work with NgRok
 
 This is a C# Application that provides a Web interface over NgRok tunneling to create and use shortened links.
 
