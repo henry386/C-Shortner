@@ -1,0 +1,36 @@
+<style>
+.main {
+position:relative;
+top: 30%;
+text-align: center;
+}
+</style>
+
+<div class="main">
+	<label for="name">Input Site URL:</label>
+
+	<input type="text" id="url" name="main_url" required maxlength="1000" size="10">
+	<button id="myBtn" onclick="request_link()">Get Shortened Link</button>
+</div>
+
+<script>
+
+// Get the input field
+var input = document.getElementById("url");
+
+// Execute a function when the user releases a key on the keyboard
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("myBtn").click();
+  }
+});
+
+function request_link() {
+  var element = document.getElementById('url').value;
+  document.location.href = window.location.href.concat("create_link").concat(element);
+}
+</script>
